@@ -154,39 +154,28 @@
 						</li>
 						<br>
 						<li>
-							<h3>Satu hari Coreng sedang bermain listrik dengan teman sekamarnya yang bernama Fajar dari Jurusan Teknik Elektro. 
-								Dia dan temannya membuat mainan tombol listrik yang berbentuk:</h3>
-							<img src="<?php echo base_url();?>assets/quiz_nlc/img/soal4.1.svg" style="width:250px;">
-							<h3>Peraturan permainan lampu ini yaitu jika suatu tombol ditekan maka tombol dengan nama yang sama akan berubah dari mati ke hidup atau hidup ke mati, 
-								namun tombol yang ditekan tidak akan berubah.
-								Jika Fajar memberi pertanyaan ke Coreng, mana dari ke lima kemungkinan di bawah yang tidak bisa dibentuk dari 2 kali menekan tombol? </h3>
-							<table style="width:250px; border:none; background-color:#FFF;">
-								<tr>
-									<td><input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
-										<label for="question-5-answers-A"> A) </label></td>
-									<td><span style=" color:#FFF"> s</span><img src="<?php echo base_url();?>assets/quiz_nlc/img/soal4.a.svg" style="width:132px;"></td>
-								</tr>
-								<tr>
-									<td><input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
-										<label for="question-5-answers-B"> B)</label></td>
-									<td><img src="<?php echo base_url();?>assets/quiz_nlc/img/soal4.b.svg" style="width:150px;"></td>
-								</tr>
-								<tr>
-									<td><input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
-										<label for="question-5-answers-C">C)</label></td>
-									<td><img src="<?php echo base_url();?>assets/quiz_nlc/img/soal4.c.svg" style="width:150px;"></td>
-								</tr>
-								<tr>
-									<td><input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
-										<label for="question-5-answers-D">D)</label></td>
-									<td><img src="<?php echo base_url();?>assets/quiz_nlc/img/soal4.d.svg" style="width:150px;"></td>
-								</tr>
-								<tr>
-									<td><input type="radio" name="question-5-answers" id="question-5-answers-E" value="E" />
-										<label for="question-5-answers-E">E)</label></td>
-									<td><img src="<?php echo base_url();?>assets/quiz_nlc/img/soal4.e.svg" style="width:150px;"></td>
-								</tr>
-							</table>
+							<h3>Pada awalnya ada beberapa orang yang berada di dalam bus. Di halte pertama ada 5 orang turun dan 7 orang naik. Di halte kedua Elsi dan kedua temannya turun, Ensi dan Lita naik. Di halte terakhir, dua belas penumpang yang tersisa turun semua. Ada berapa penumpang di dalam bus sebelum halte pertama?</h3>
+						<div>
+								<input type="radio" name="question-5-answers" id="question-6-answers-A" value="A" />
+								<label for="question-6-answers-A">A) 10</label>
+							</div>
+							<div>
+								<input type="radio" name="question-5-answers" id="question-6-answers-B" value="B" />
+								<label for="question-6-answers-B">B) 11</label>
+							</div>
+							<div>
+								<input type="radio" name="question-5-answers" id="question-6-answers-C" value="C" />
+								<label for="question-6-answers-C">C) 12</label>
+							</div>
+							<div>
+								<input type="radio" name="question-5-answers" id="question-6-answers-D" value="D" />
+								<label for="question-6-answers-D">D) 13</label>
+							</div>
+							<div>
+								<input type="radio" name="question-5-answers" id="question-6-answers-E" value="E" />
+								<label for="question-6-answers-E">E) 14</label>
+							</div>	
+							
 						</li>
 						<br>
 						<li>

@@ -45,7 +45,7 @@
 	</header>
 <header>
 <div class="line">
-<div style="height:60vh; background-position:left; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/img/npc.jpg)"></div>
+<div style="background:url('<?php echo base_url(); ?>assets/img/npc.png'), #f44236;height:60vh; background-position:left; background-size:cover; background-repeat:no-repeat;" ></div>
 </div>
 </header>
 

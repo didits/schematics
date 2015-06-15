@@ -34,7 +34,7 @@ class Nlc extends CI_Controller {
             if ($answer2 == "D") { $totalCorrect++; }
             if ($answer3 == "B") { $totalCorrect++; }
             if ($answer4 == "A") { $totalCorrect++; }
-            if ($answer5 == "D") { $totalCorrect++; }
+            if ($answer5 == "B") { $totalCorrect++; }
             if ($answer6 == "C") { $totalCorrect++; }
             if ($answer7 == "C") { $totalCorrect++; }
             if ($answer8 == "B") { $totalCorrect++; }
