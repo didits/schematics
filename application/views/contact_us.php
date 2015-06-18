@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" />
 <title>HUBUNGI KAMI | Schematics 2015</title>
+<link rel="shortcut icon"  href="<?php echo base_url(); ?>assets/img/icon.ico">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/responsee.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/responsee.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>

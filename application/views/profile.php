@@ -16,31 +16,18 @@
 </head>
 <body style="background-color:#fff">
 <!-- HEADER -->
-<header> 
-		<!-- TOP NAV -->
-		<div class="line" >
-			<div class="l-1 s-12 hide-s" > <a href="<?php echo base_url(); ?>home"><img src="<?php echo base_url(); ?>assets/img/logo.svg" style="height:50px; margin-top:3px" class="center"/></a> </div>
-			<div class="l-11 s-12" style="background:none;">
-				<nav class="menu" style="background:none;">
-					<p class="nav-text">MENU</p>
-					<div class="top-nav"  >
-						<ul class="chevron" id="menu-main">
-							<li><a href="<?php echo base_url(); ?>home">BERANDA</a></li>
-							<li><a href="<?php echo base_url(); ?>blog">BLOG</a></li>
-							<li><a href="<?php echo base_url(); ?>nlc">NLC</a></li>
-							<li><a href="<?php echo base_url(); ?>npc">NPC</a></li>
-							<li><a href="<?php echo base_url(); ?>nst">NST</a></li>
-							<li><a href="<?php echo base_url(); ?>reeva">REEVA</a></li>
-							<li><a href="<?php echo base_url(); ?>faq">FAQ</a></li>
-							<li><a href="<?php echo base_url(); ?>contact">CONTACT</a></li>
-							<li><a href="<?php echo base_url() ?>login">LOGIN</a></li>
-							<li><a href="<?php echo base_url(); ?>buat_akun">DAFTAR</a></li>
-						</ul>
-					</div>
-				</nav>
+<header>
+	<div class="line" style="border-bottom:#333 1px solid">
+		<nav>
+			<p class="nav-text">Quiz NLC</p>
+			<div class="top-nav s-12 l-12">
+				<ul>
+					<li><a href="<?php echo base_url();?>home"><i class="icon-arrow_left"></i> KEMBALI</a></li>
+				</ul>
 			</div>
-		</div>
-	</header>
+		</nav>
+	</div>
+</header>
 <header>
 	<div class="line">
 		<div style="background:url('<?php echo base_url(); ?>assets/img/nlc_1.png'), #fec107; height:60vh; background-position:right; 
@@ -233,3 +220,6 @@
 	</div>
 </div>
 <br>
+
+<!--ampe sini-->
+<iframe src="<?php echo base_url();?>/assets/slider_nlc" width="100%" height="400px" scrolling="no" frameborder="0" style="margin-bottom:-20px"></iframe>

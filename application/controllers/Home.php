@@ -7,4 +7,9 @@ class Home extends CI_Controller {
 		$this->load->view('home/index');
 		$this->load->view('footer');
 	}
+	public function profile()
+	{
+		$this->load->view('profile');
+		$this->load->view('footer');
+	}
 }

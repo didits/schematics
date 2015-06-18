@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" />
 <title>Contoh Soal NLC | Schematics 2015</title>
+<link rel="shortcut icon"  href="<?php echo base_url(); ?>assets/img/icon.ico">
 <meta name='description' content='Saya mendapatkan nilai: <?php echo $skor; ?> dari Quiz NLC Schematics 2015, Coba tes kemampuan logikamu sekarang!'>
 <meta name='og:image' content='http://carrot.is/img/fb-share.jpg'>
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
 <!--[if lt IE 9]>
