@@ -7,6 +7,11 @@
 <link rel="shortcut icon"  href="<?php echo base_url(); ?>assets/img/icon.ico">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
+<<<<<<< HEAD
+=======
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
+<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+>>>>>>> bc6d71862941c2067090b29a8a3d2ce2e33c58a7
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
@@ -43,14 +48,18 @@
 		</div>
 	</header>
 <header>
-<div class="line">
+<div class="line wow slideInRight">
+		<section class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+	</section>
 <div style="background:url('<?php echo base_url(); ?>assets/img/npc.png'), #f44236;height:60vh; background-position:left; background-size:cover; background-repeat:no-repeat;" ></div>
 </div>
 </header>
 
 <section>
 <div class="box">
-<div class="s-12 l-8 center">
+<div class="s-12 l-8 center wow fadeInRight">
+		<section class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+	</section>
 <h1 align="left" style="color:#666;">NATIONAL PROGRAMMING CONTEST</h1>
 <p align="left" style="color:#666;">NPC merupakan suatu kompetisi pemrograman tingkat nasional dengan standar kompetisi tingkat Internasional. Dalam NPC (National Programming Contest), peserta akan ditantang untuk menyelesaikan suatu permasalahan dengan membuat suatu program komputer. Bahasa pemrograman yang digunakan adalah Pascal (ekstensi file *.pas) atau C (ekstensi file *.c).</p>
 <br>
@@ -97,20 +106,22 @@
 <div class="line" style="margin-top:40px" >
 		<div align="center" >
 			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/1.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 3 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/1.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 3 juta</p></div>
 			</div>
 			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/2.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 2 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/2.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 2 juta</p></div>
 			</div>
 			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/3.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/3.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1 juta</p></div>
 			</div>
 			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/4.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 0.5 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/4.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 0.5 juta</p></div>
 			</div>
 			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/5.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 0.5 juta</p></div>
-			</div>			
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/5.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 0.5 juta</p></div>
+			</div>
+				<section class="wow flipInX" data-wow-duration="3s" data-wow-delay="10s" data-wow-offset="12"  data-wow-iteration="15">
+			</section>
 		</div>
 	</div>
 		<p style="list-style-type:square">Semua juara akan mendapatkan sertifikat dan plakat juara dan hadiah uang.
@@ -163,22 +174,40 @@
 <div class="s-8 l-8 center">
 <div class="line">
 <div class="margin" align="center">
-<div class="s-12 l-five"><div class="box-dark">
+<div class="s-12 l-five"><div class="box-dark wow bounceIn">
 	<img src="<?php echo base_url();?>/assets/npc_tl/npc1.png" style="display:block;max-width: 150px; height: auto">
 		<p style="margin-bottom:30px">Pendaftaran Online</p></div></div>
-<div class="s-12 l-five"><div class="box-dark">
+<div class="s-12 l-five"><div class="box-dark wow bounceIn">
 	<img src="<?php echo base_url();?>/assets/npc_tl/npc2.png" style="display:block;max-width: 150px; height: auto">
 		<p style="margin-bottom:30px">Tutorial Online</p>	</div></div>
-<div class="s-12 l-five"><div class="box-dark">
+<div class="s-12 l-five"><div class="box-dark wow bounceIn">
 	<img src="<?php echo base_url();?>/assets/npc_tl/npc3.png" style="display:block;max-width: 150px; height: auto">
 		<p style="margin-bottom:30px">Warmning Up Online</p></div></div>
-<div class="s-12 l-five"><div class="box-dark">
+<div class="s-12 l-five"><div class="box-dark wow bounceIn">
 	<img src="<?php echo base_url();?>/assets/npc_tl/npc4.png" style="display:block;max-width: 150px; height: auto">
 		<p style="margin-bottom:30px">Penyisihan Online</p></div></div>
-<div class="s-12 l-five"><div class="box-dark">
+<div class="s-12 l-five"><div class="box-dark wow bounceIn">
 	<img src="<?php echo base_url();?>/assets/npc_tl/npc5.png" style="display:block;max-width: 150px; height: auto">
 	<p style="margin-bottom:30px">Final Onsite at Teknik Informatika ITS</p></div></div>
 </div>
 </div>
 </div>
 <br>
+<<<<<<< HEAD
+=======
+<!--ampe sini-->
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
+<script>
+			wow = new WOW(
+			  {
+				animateClass: 'animated',
+				offset:       100,
+				callback:     function(box) {
+				  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+				}
+			  }
+			);
+			wow.init();
+		  </script>
+<iframe src="<?php echo base_url();?>/assets/slider_nlc" width="100%" height="400px" scrolling="no" frameborder="0" style="margin-bottom:-20px"></iframe>
+>>>>>>> bc6d71862941c2067090b29a8a3d2ce2e33c58a7

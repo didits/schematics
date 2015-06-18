@@ -7,6 +7,7 @@
 <link rel="shortcut icon"  href="<?php echo base_url(); ?>assets/img/icon.ico">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
@@ -43,14 +44,18 @@
 		</div>
 	</header>
 <header>
-<div class="line">
+<div class="line wow slideInRight">
+		<section class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+	</section>
 <div style="background:url('<?php echo base_url(); ?>assets/img/reeva.png'), #2095f2;height:60vh; background-position:left; background-size:cover; background-repeat:no-repeat;"></div>
 </div>
 </header>
 
 <section>
 <div class="box" style="min-height:100vh">
-<div class="s-12 l-8 center">
+<div class="s-12 l-8 center wow fadeInRight">
+		<section class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+	</section>
 <h1 align="left" style="color:#666;"><span style=" border-bottom:#333 1px dotted">Coming Soon</span> Revolutionary Entertainment and Expo with Various Arts</h1>
 <p align="left" style="color:#666;">REEVA merupakan salah satu
 rangkaian acara Schematics 2015. REEVA
@@ -75,3 +80,17 @@ teknologi terkini bagi masyarakat umum.</p>
 </div>
 </div>
 </section>
+
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
+<script>
+			wow = new WOW(
+			  {
+				animateClass: 'animated',
+				offset:       100,
+				callback:     function(box) {
+				  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+				}
+			  }
+			);
+			wow.init();
+		  </script>

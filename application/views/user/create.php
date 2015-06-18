@@ -7,6 +7,7 @@
 <link rel="shortcut icon"  href="<?php echo base_url(); ?>assets/img/icon.ico">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
@@ -42,7 +43,7 @@
 		</div>
 	</header>
 <section> <br>
-	<div class="topline margin-bottom" style="margin:10px">
+	<div class="topline margin-bottom wow fadeInDown" style="margin:10px">
 		<div class="s-12 l-4 center" style="min-height:100vh">
 		<div style="display:inline-block; width:100%; height:100px; background-color:#9c26b0">
 		<h2 align="center" style="line-height:100px; color:#FFF">BUAT AKUN</h2>
@@ -78,63 +79,16 @@
 	</div>
 	<br>
 </section>
-<script type="text/javascript">
-$(document).ready(function(){
-		
-	$("#email_address").blur(function(){
-        var email = $("#email_address").val();
-        
-        if(email != 0)
-        {
-         
-            if(isValidEmailAddress(email))
-            {
-               $("#email_verify").css({ "background-image": "url('<?php echo base_url();?>assets/images/yes.png')" });
-               email_con=true;
-               //register_show();
-            } else {
-               
-                $("#email_verify").css({ "background-image": "url('<?php echo base_url();?>assets/images/no.png')" });
-            }
- 
-        }
-        else {
-            $("#email_verify").css({ "background-image": "url('<?php echo base_url();?>assets/images/no.png')" });
-        }
-
-    });
-	
-	$("#password").blur(function(){
-        var password = $("#password").val();
-        
-        if($("#password").val().length >=6)
-        {
-         
-            if(isValidPassword(password))
-            {
-               $("#password_verify").css({ "background-image": "url('<?php echo base_url();?>assets/images/yes.png')" });
-               email_con=true;
-               //register_show();
-            } else {
-               
-                $("#password_verify").css({ "background-image": "url('<?php echo base_url();?>assets/images/no.png')" });
-            }
- 
-        }
-        else {
-            $("#password_verify").css({ "background-image": "url('<?php echo base_url();?>assets/images/no.png')" });
-        }
-
-    });
-    
-});
-
-function isValidPassword(password) {
- 		var pattern = new RegExp(/^[a-zA-Z0-9_-~!@#$%^&*()+=]{6,32}$/i);
- 		return pattern.test(password);
-	}
-function isValidEmailAddress(emailAddress) {
- 		var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
- 		return pattern.test(emailAddress);
-	}
-</script>
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
+<script>
+			wow = new WOW(
+			  {
+				animateClass: 'animated',
+				offset:       100,
+				callback:     function(box) {
+				  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+				}
+			  }
+			);
+			wow.init();
+		  </script>
