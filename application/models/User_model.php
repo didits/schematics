@@ -37,6 +37,15 @@ class User_model extends CI_Model {
 		$event=$this->input->post('event');
 		$this->db->query("call buat_akun('$email', '$password', '$event')");
 	}
+
+	public function panitia()
+	{
+		$nrp=$this->input->post('nrp');
+		$nama=$this->input->post('nama');
+		$email=$this->input->post('email');
+		$event=$this->input->post('event');
+		$this->db->query("call buat_panitia('$nrp', '$nama', '$email', '$event')");
+	}
 	
 	public function check_email_exist($email)
     {

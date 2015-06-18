@@ -43,7 +43,7 @@
 		</div>
 	</header>
 <header>
-	<div class="line wow slideInRight">
+	<div class="line wow fadeIn">
 		<section class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
 		</section>
 		<div style="background:url('<?php echo base_url(); ?>assets/img/nlc_1.png'), #fec107; height:60vh; background-position:right; 
@@ -244,13 +244,10 @@
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
 <br>
-=======
 <br>
 
 <!--ampe sini-->
-<iframe src="<?php echo base_url();?>/assets/slider_nlc" width="100%" height="400px" scrolling="no" frameborder="0" style="margin-bottom:-20px"></iframe>
 <script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
 
 <script>
@@ -265,5 +262,3 @@
 			);
 			wow.init();
 		  </script>
-
->>>>>>> bc6d71862941c2067090b29a8a3d2ce2e33c58a7

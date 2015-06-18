@@ -45,7 +45,7 @@
 						<h1>&nbsp;</h1>
 						<h1>&nbsp;</h1>
 						<center>
-							<h1><i class=" icon3x icon-check" style="color: #4baf4f"></i></h1>
+							<img src="<?php echo base_url();?>assets/images/Checkmark.png" style="width: 200px" />
 						</center>
 					</div>
 				</div>

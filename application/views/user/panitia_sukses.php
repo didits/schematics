@@ -23,7 +23,7 @@
 			<p class="nav-text">MENU</p>
 			<div class="top-nav s-12 l-12">
 				<ul>
-					<li><a href="<?php echo base_url(); ?>home"><i class="icon-arrow_left"></i> KEMBALI</a></li>
+					<li><a href="<?php echo base_url(); ?>panitia"><i class="icon-arrow_left"></i> KEMBALI</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -35,9 +35,9 @@
 	<div class="topline margin-bottom" style="margin:10px">
 		<div class="s-12 l-4 center" style=" padding:5px">
 		<div style="display:inline-block; width:100%; height:100px; background-color:#4baf4f">
-		<h2 align="center" style="line-height:100px; color:#FFF">BUAT AKUN SUKSES</h2>
+		<h2 align="center" style="line-height:100px; color:#FFF">SUBMIT SUKSES</h2>
 		</div>
-			<form class="customform" action="<?php echo base_url();?>login" method="post">
+			<form class="customform" action="<?php echo base_url();?>panitia" method="post">
 					<div class="box">
 						<div id="id">
 							<center>
@@ -51,7 +51,7 @@
 					<div class="s-12 l-6"> </div>
 					<div class="s-12 l-5 center">
 						<div class="box">
-							<button type="submit" style="background-color:#06F">LOGIN</button>
+							<button type="submit" style="background-color:#06F">KEMBALI</button>
 							</div>
 					</div>
 					</div>

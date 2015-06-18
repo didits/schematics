@@ -10,6 +10,9 @@ ob_start();
 
 </head>
 <body>
+    <?php 
+// Insert a dynamic image from a URL
+$pdf->Image('http://chart.googleapis.com/chart?cht=p3&chd=t:60,40&chs=250x100&chl=Hello|World',60,30,90,0,'PNG'); ?>
 <table  width="100%" cellspacing="6" cellpadding="5" align="center" border="0">
 	<tr><td colspan="2">xssa</td></tr>
     <tr><td width="150px">Id Tim</td>

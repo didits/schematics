@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" />
-<title>Login | Schematics 2015</title>
+<title>NOT FOUND 404 | Schematics 2015</title>
 <link rel="shortcut icon"  href="<?php echo base_url(); ?>assets/img/icon.ico">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/parallax.css"/>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
@@ -15,7 +16,7 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
-<body style=" background-color:#fec107">
+<body style=" background-color:#e91d62">
 <!-- HEADER -->
 <header> 
 		<!-- TOP NAV -->
@@ -45,11 +46,11 @@
 <section> <br>
 	<div class="topline margin-bottom wow fadeInDown" style="margin:10px" >
 		<div class="s-12 l-6 center" style="min-height:100vh">
-		<div align="center" >
-			<div class="s-12 l-4" ><div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/4.png" class="img-rounded" style="max-width:150px;"></div></div>
-			<div class="s-12 l-4" ><div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/0.png" class="img-rounded" style="max-width:150px;"></div></div>
-			<div class="s-12 l-4" ><div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/4.png" class="img-rounded" style="max-width:150px;"></div></div>
-		</div>
+		<ul id="nst" class="scene" >
+		<li class="layer" data-depth="1.00"><img src="<?php echo base_url(); ?>assets/images/4041.png"></li>
+		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/images/4042.png"></li>
+		<li class="layer" data-depth="0.60"><img src="<?php echo base_url(); ?>assets/images/4043.png"></li>
+		</ul>
 		</div>
 	</div>
 	<br>
@@ -67,3 +68,10 @@
 			);
 			wow.init();
 		  </script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.parallax.js"></script> 
+<script>
+
+	// Yep, that's it!
+	$('#nst').parallax();
+
+	</script>

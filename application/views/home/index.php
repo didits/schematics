@@ -9,9 +9,7 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.theme.css">
-<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.theme.css"><script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
 <!--[if lt IE 9]>
@@ -226,7 +224,6 @@ a {
 				   });
 				 });
 			  </script> 
-<script src="<?php echo base_url(); ?>assets/js/jquery.js"></script> 
 <script src="<?php echo base_url(); ?>assets/js/jquery.parallax.js"></script> 
 <script>
 

@@ -7,11 +7,7 @@
 <link rel="shortcut icon"  href="<?php echo base_url(); ?>assets/img/icon.ico">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
-<<<<<<< HEAD
-=======
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
-<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
->>>>>>> bc6d71862941c2067090b29a8a3d2ce2e33c58a7
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
@@ -48,7 +44,7 @@
 		</div>
 	</header>
 <header>
-<div class="line wow slideInRight">
+<div class="line wow fadeIn">
 		<section class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
 	</section>
 <div style="background:url('<?php echo base_url(); ?>assets/img/npc.png'), #f44236;height:60vh; background-position:left; background-size:cover; background-repeat:no-repeat;" ></div>
@@ -209,5 +205,3 @@
 			);
 			wow.init();
 		  </script>
-<iframe src="<?php echo base_url();?>/assets/slider_nlc" width="100%" height="400px" scrolling="no" frameborder="0" style="margin-bottom:-20px"></iframe>
->>>>>>> bc6d71862941c2067090b29a8a3d2ce2e33c58a7

@@ -44,8 +44,8 @@
 		</div>
 	</header>
 <header>
-<div class="line wow slideInRight">
-		<section class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+<div class="line wow fadeIn">
+		<section  class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
 	</section>
 <div style="background:url('<?php echo base_url(); ?>assets/img/reeva.png'), #2095f2;height:60vh; background-position:left; background-size:cover; background-repeat:no-repeat;"></div>
 </div>

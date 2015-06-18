@@ -64,6 +64,10 @@ class User extends CI_Controller{
 	function thank(){
 		$this->load->view('user/RegisterSuccess');
 	}
+
+	function thank_panitia(){
+		$this->load->view('user/panitia_sukses');
+	}
 	
 	public function registration(){
 		$this->load->helper('security');
@@ -79,6 +83,11 @@ class User extends CI_Controller{
 			$this->user_model->add_user();
 			$this->thank();
 		}
+	}
+
+	public function panitia(){
+			$this->user_model->panitia();
+			$this->thank_panitia();
 	}
 	public function logout()
 	{
