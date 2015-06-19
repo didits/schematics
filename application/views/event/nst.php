@@ -6,6 +6,7 @@
 <title>NST | Schematics 2015</title>
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui.min.js"></script>
@@ -43,7 +44,9 @@
 		</div>
 	</header>
 <header>
-<div class="line">
+<div class="line wow slideInRight">
+		<section class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+	</section>
 <div style="background:url('<?php echo base_url(); ?>assets/img/nst.png'), #8bc24a; height:60vh; background-position:right; 
 		background-size:cover; background-repeat:no-repeat; "></div>
 </div>
@@ -51,7 +54,9 @@
 
 <section>
 <div class="box" style="min-height:100vh">
-<div class="s-12 l-8 center">
+<div class="s-12 l-8 center wow fadeInRight">
+		<section class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+	</section>
 <h1 align="left" style="color:#666;"><span style=" border-bottom:#333 1px dotted">Coming Soon</span> National Seminar of Technology</h1>
 <p align="left" style="color:#666;">NST merupakan salah
 satu dari rangkaian acara Schematics 2015 yang
@@ -66,3 +71,17 @@ Indonesia.</p>
 </div>
 </div>
 </section>
+
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
+<script>
+			wow = new WOW(
+			  {
+				animateClass: 'animated',
+				offset:       100,
+				callback:     function(box) {
+				  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+				}
+			  }
+			);
+			wow.init();
+		  </script>

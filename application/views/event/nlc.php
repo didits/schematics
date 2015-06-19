@@ -6,6 +6,7 @@
 <title>NLC | Schematics 2015</title>
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
@@ -42,14 +43,19 @@
 		</div>
 	</header>
 <header>
-	<div class="line">
+	<div class="line wow slideInRight">
+		<section class="wow slideInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+		</section>
 		<div style="background:url('<?php echo base_url(); ?>assets/img/nlc_1.png'), #fec107; height:60vh; background-position:right; 
-		background-size:cover; background-repeat:no-repeat; "></div>
+		background-size:cover; background-repeat:no-repeat;">
+		</div>
 	</div>
 </header>
-<section >
+<section>
 	<div class="box">
-		<div class="s-12 l-8 center">
+		<div class="s-12 l-8 center wow fadeInRight">
+			<section class="wow fadeInRight" data-wow-duration="3s" data-wow-delay="5s" data-wow-offset="12"  data-wow-iteration="9">
+		</section>
 			<h1 align="left" style="color:#666;">NATIONAL LOGIC COMPETITION</h1>
 			<p align="left" style="color:#666;">NLC (NATIONAL LOGIC COMPETITION) adalah kompetisi logika nasional terbesar di Indonesia. Di dalam kompetisi ini peserta akan diuji kemampuan logikanya, sehingga peserta tidak perlu repot-repot belajar untuk menghapal rumus - rumus dan teori-teori, cukup dengan hanya mengandalkan kemampuan berpikir kalian, kalian bisa mengikuti kompetisi yang bergengsi ini. Ayo uji kemampuan logikamu dalam kompetisi ini!</p>
 			<form class="customform" action="<?php echo base_url();?>nlc/quiz" method="post">
@@ -90,43 +96,45 @@
 	<div class="line" style="margin-top:30px" >
 		<div align="center" >
 			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Jakarta</p></div>
-			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Solo</p></div>
-			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Madiun</p></div>
-			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Surabaya</p></div>
-			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Malang</p></div>
-			</div>
-			
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Jakarta</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Solo</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Madiun</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Surabaya</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Malang</p></div>
+				</div>
+					<section class="wow flipInX" data-wow-duration="3s" data-wow-delay="10s" data-wow-offset="12"  data-wow-iteration="15">
+				</section>
 		</div>
 	</div>
 	
 	<div class="line"  >
-		<div align="center" >
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Kediri</p></div>
+			<div align="center" >
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Kediri</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Tulungagung*</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Jember</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Denpasar</p></div>
+				</div>
+				<div class="s-12 l-five">
+					<div class="box-dark wow flipInX"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Sumbawa*</p></div>
+				</div>
+				<section class="wow flipInX" data-wow-duration="3s" data-wow-delay="10s" data-wow-offset="12"  data-wow-iteration="15">
+				</section>
 			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Tulungagung*</p></div>
-			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Jember</p></div>
-			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Denpasar</p></div>
-			</div>
-			<div class="s-12 l-five">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/mapi.png" class="img-rounded" style="max-width:150px;"> <p style="margin-bottom:30px">Sumbawa*</p></div>
-			</div>
-			
-		</div>
 	</div>
 	<p>*opsional</p>
 				</li>
@@ -138,23 +146,25 @@
 												<div class="line" style="margin-top:40px" >
 		<div align="center" >
 			<div class="s-12 l-2">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/1.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 6 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/1.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 6 juta</p></div>
 			</div>
 			<div class="s-12 l-2">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/2.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 4.5 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/2.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 4.5 juta</p></div>
 			</div>
 			<div class="s-12 l-2">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/3.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 3 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/3.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 3 juta</p></div>
 			</div>
 			<div class="s-12 l-2">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/4.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1.5 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/4.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1.5 juta</p></div>
 			</div>
 			<div class="s-12 l-2">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/5.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1.5 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/5.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1.5 juta</p></div>
 			</div>
 			<div class="s-12 l-2">
-				<div class="box-dark"> <img  src="<?php echo base_url() ?>assets/images/piala/6.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1.5 juta</p></div>
+				<div class="box-dark wow fadeIn"> <img  src="<?php echo base_url() ?>assets/images/piala/6.png" class="img-rounded" style="max-width:100px;"> <p style="margin-bottom:30px">Rp. 1.5 juta</p></div>
 			</div>
+				<section class="wow fadeIn" data-wow-duration="3s" data-wow-delay="10s" data-wow-offset="12"  data-wow-iteration="15">
+			</section>
 		</div>
 	</div>
 					
@@ -218,17 +228,19 @@
 	<div class="line" >
 		<div class="margin" align="center" >
 			<div class="s-12 l-3">
-				<div class="box-dark"> <img src="<?php echo base_url();?>/assets/nlc_tl/nlc1.png" style="display:block;max-width: 150px; height: auto"> <p style="margin-bottom:30px">Pendaftaran Online</p></div>
+				<div class="box-dark wow bounceIn"> <img src="<?php echo base_url();?>/assets/nlc_tl/nlc1.png" style="display:block;max-width: 150px; height: auto"> <p style="margin-bottom:30px">Pendaftaran Online</p></div>
 			</div>
 			<div class="s-12 l-3">
-				<div class="box-dark" > <img src="<?php echo base_url();?>/assets/nlc_tl/nlc2.png" style="display:block;max-width: 150px; height: auto"> <p style="margin-bottom:30px">Penyisihan Offline</p></div>
+				<div class="box-dark wow bounceIn" > <img src="<?php echo base_url();?>/assets/nlc_tl/nlc2.png" style="display:block;max-width: 150px; height: auto"> <p style="margin-bottom:30px">Penyisihan Offline</p></div>
 			</div>
 			<div class="s-12 l-3">
-				<div class="box-dark"> <img src="<?php echo base_url();?>/assets/nlc_tl/nlc3.png" style="display:block;max-width: 150px; height: auto"> <p style="margin-bottom:30px">Perempat Final</p></div>
+				<div class="box-dark wow bounceIn"> <img src="<?php echo base_url();?>/assets/nlc_tl/nlc3.png" style="display:block;max-width: 150px; height: auto"> <p style="margin-bottom:30px">Perempat Final</p></div>
 			</div>
 			<div class="s-12 l-3">
-				<div class="box-dark"> <img src="<?php echo base_url();?>/assets/nlc_tl/nlc4.png" style="display:block;max-width: 150px; height: auto"> Semi <p style="margin-bottom:30px">Final dan Final</p></div>
+				<div class="box-dark wow bounceIn"> <img src="<?php echo base_url();?>/assets/nlc_tl/nlc4.png" style="display:block;max-width: 150px; height: auto"> Semi <p style="margin-bottom:30px">Final dan Final</p></div>
 			</div>
+				<section class="wow bounceIn" data-wow-duration="3s" data-wow-delay="10s" data-wow-offset="12"  data-wow-iteration="15">
+			</section>
 		</div>
 	</div>
 </div>
@@ -236,3 +248,18 @@
 
 <!--ampe sini-->
 <iframe src="<?php echo base_url();?>/assets/slider_nlc" width="100%" height="400px" scrolling="no" frameborder="0" style="margin-bottom:-20px"></iframe>
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
+
+<script>
+			wow = new WOW(
+			  {
+				animateClass: 'animated',
+				offset:       100,
+				callback:     function(box) {
+				  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+				}
+			  }
+			);
+			wow.init();
+		  </script>
+

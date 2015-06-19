@@ -6,6 +6,7 @@
 <title>Dashboard | NLC</title>
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
@@ -30,12 +31,12 @@
 </header>
 <section> <br>
 	<div class="topline margin-bottom" style="margin:10px">
-		<div class="s-12 l-5 center" style=" padding:5px">
+		<div class="s-12 l-5 center wow bounceInUp" style=" padding:5px">
 			<div style="display:inline-block; width:100%; height:100px; background-color:#ff5521">
 				<h2 align="center" style="line-height:100px; color:#FFF">IDENTITAS PESERTA NLC</h2>
 			</div>
 			<form class="customform" action="<?php echo base_url();?>dashboard/tambahnlc" method="post" enctype="multipart/form-data">
-				<div class="box">
+				<div class="box wow bounceInUp">
 					<div id="id">
 						<div style="display:inline-block; width:100%; height:auto; background-color:#f44236; margin-bottom:10px; border-radius:8px"> <?php echo validation_errors('<p class="error">'); ?> 
 						<?php echo "<p class='error'>$error</p>";?></div>
@@ -131,6 +132,20 @@
 	</div>
 	<br>
 </section>
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
+<script>
+			wow = new WOW(
+			  {
+				animateClass: 'animated',
+				offset:       100,
+				callback:     function(box) {
+				  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+				}
+			  }
+			);
+			wow.init();
+		  </script>
+
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#nama_kelompok").blur(function(){
