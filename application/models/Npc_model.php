@@ -10,6 +10,11 @@ class Npc_model extends CI_Model{
 		return $this->db->query("select * from informasi_npc");
 	}
 	
+	public function bukti_pendaftaran($email){
+		$mail=$email;
+		return $this->db->query("call cetak_npc('$mail')");
+	}
+
     public function tambahdata(){
 		//variabel global
 		$hasil='';

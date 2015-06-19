@@ -39,8 +39,8 @@
 				<div class="box wow bounceInUp">
 					<div id="id">
 						<div style="display:inline-block; width:100%; height:auto; background-color:#f44236; margin-bottom:10px; border-radius:8px"> <?php echo validation_errors('<p class="error">'); ?> 
-						<?php echo "<p class='error'>$error</p>";?></div>
-						<h1>&nbsp</h1>
+						<?php if($error==' '){}else echo"<p class='error'>$error</p>";?></div>
+						<h1>&nbsp;</h1>
 						<h3>Nama Kelompok * <span id="nama_kelompok_verify" class="verify" style="display:inline-block; width:16px; height:16px;"></span> </h3>
 						<h4>Nama kelompok minimal 4 - 10 karakter tanpa spasi</h4>
 						<input name="nama_kelompok" id="nama_kelompok" value="<?php echo set_value('nama_kelompok'); ?>" title="Nama Kelompok" type="text" required/>

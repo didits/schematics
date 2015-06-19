@@ -14,7 +14,7 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
-<body style="background-color:#354044">
+<body style="background-color:#ffe93b">
 <!-- HEADER -->
 <header>
 	<div class="line">
@@ -30,10 +30,13 @@
 </header>
 <section> <br>
 	<div class="topline margin-bottom" style="margin:10px">
-		<div class="s-12 l-6 center" style=" padding:5px">
+		<div class="s-12 l-5 center" style=" padding:5px">
+			<div  style="display:inline-block; width:100%; height:100px; background-color:#019587">
+				<h2 align="center" style="line-height:100px; color:#FFF">VERIFIKASI BERHASIL</h2>
+			</div>
 			<form class="customform" action="<?php echo base_url();?>user/logout" method="post">
 				<div class="box">
-		<p style="line-height:50px; font-size:24px" align="center">Verifikasi Berhasil, harap mencetak bukti pendaftaran <BR></p>
+		<p style="line-height:50px; font-size:24px" align="center">Harap mencetak bukti pendaftaran! <BR></p>
 		<P align="center"><br><a href="<?php echo base_url();?>dashboard/bukti_pendaftaran" target="_blank"><span style="background-color:#8bc24a" class="button">BUKTI PENDAFTARAN</span></a></P>
 					<br>
 					<div class="pemisah"></div>

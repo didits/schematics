@@ -39,9 +39,9 @@
 					<div id="id">
 						<div style="display:inline-block; width:100%; height:auto; background-color:#f44236; margin-bottom:10px; border-radius:8px">
 							<?php echo validation_errors('<p class="error">'); ?>
-							<?php echo "<p class='error'>$error</p>";?>
+							<?php if($error==' '){}else echo"<p class='error'>$error</p>";?>
 							</div>
-						<h1>&nbsp</h1>
+						<h1>&nbsp;</h1>
 						<h3>Nama Sekolah *<span id="asal_sekolah_verify" class="verify" style="display:inline-block; width:16px; height:16px;"></span></h3>
 						<input id="asal_sekolah" value="<?php echo set_value('asal_sekolah'); ?>" name="asal_sekolah" title="Asal Sekolah" type="text"required />
 						<h3>Alamat Sekolah *</h3>

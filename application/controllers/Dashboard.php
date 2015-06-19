@@ -11,7 +11,16 @@ class Dashboard extends CI_Controller {
 	
 	public function bukti_pendaftaran()
 	{
-		$this->load->view('pdf');
+		$email= $this->session->userdata('user_email');
+		$data['h'] = $this->nlc_model->bukti_pendaftaran($email);
+		$this->load->view('pdf', $data);
+	}
+
+	public function bukti_pendaftaran_npc()
+	{
+		$email= $this->session->userdata('user_email');
+		$data['h'] = $this->npc_model->bukti_pendaftaran($email);
+		$this->load->view('pdf_npc', $data);
 	}
 	
 	public function nlc()
