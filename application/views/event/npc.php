@@ -189,8 +189,6 @@
 </div>
 </div>
 <br>
-<<<<<<< HEAD
-=======
 <!--ampe sini-->
 <script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
 <script>

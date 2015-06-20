@@ -20,7 +20,7 @@
 <header> 
 		<!-- TOP NAV -->
 		<div class="line" >
-			<div class="l-1 s-12 hide-s" > <a href="<?php echo base_url(); ?>home"><img src="<?php echo base_url(); ?>assets/img/logo.svg" style="height:50px; margin-top:3px" class="center"/></a> </div>
+			<div class="l-1 s-12 hide-s" > <a href="<?php echo base_url(); ?>home"><img  src="<?php echo base_url(); ?>assets/img/logo.svg" style="height:50px; margin-top:3px" class="center"/></a> </div>
 			<div class="l-11 s-12" style="background:none;">
 				<nav class="menu" style="background:none;">
 					<p class="nav-text">MENU</p>
@@ -70,7 +70,7 @@
 			<div class="pemisah"></div>
 			<br>
 			<ol type="A">
-				<li>
+				<li class="wow fadeInRight">
 					<h3>Persyaratan dan Biaya Pendaftaran</h3>
 					<ol type="1">
 						<li>
@@ -89,7 +89,7 @@
 					<br>
 					<div class="pemisah"></div>
 					<br>
-				<li>
+				<li class="wow fadeInLeft">
 					<h3>Tempat Pelaksanaan NLC</h3>
 					<p style="list-style-type:square">Penyisihan NLC akan dilaksanakan secara online dan offline. Untuk penyisihan online peserta hanya dibatasi maksimal 200 tim. Sementara untuk penyisihan offline akan dilaksanakan pada daerah-daerah di bawah ini:
 				
