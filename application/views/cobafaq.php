@@ -118,9 +118,9 @@ p{
 			<li>
 				<div class="faq_container">
    				<div class="faq">
-      			<div class="faq_question">Pertanyaan 1</div>
+      			<div class="faq_question">Kak, saya mau daftar nih. Gimana ya caranya?</div>
            		<div class="faq_answer_container">
-              	<div class="faq_answer">Jawaban 1</div>
+              	<div class="faq_answer">Ada 2 jalur yang bisa dilalui. Langsung aja isi di webnya atau cari panitia terdekat. rinciannya bisa cek di video berikut.</div>
            	</div>        
     		</div>
  			</div>
@@ -139,23 +139,23 @@ p{
 		<div class="pemisah"></div>
 		<br>
 	<li>
-		<h3>Pasca Pendaftaran</h3>
+		<h3>Saat Pendaftaran</h3>
 		<ol type="1">
 			<li>
 			    <div class="faq_container">
 			    <div class="faq">
-      		    <div class="faq_question">Pertanyaan 1</div>
+      		    <div class="faq_question">Kak, kan saya dari daerah di luar 10 daerah yang tercantum untuk penyisihan offline. itu saya isi apa ya untuk penyisihannya?</div>
            		<div class="faq_answer_container">
-              	<div class="faq_answer">Jawaban 1</div>
+              	<div class="faq_answer">Adek bisa pilih daerah yang paling dekat dari daerah tempat tinggal adek. Adek bisa ikut penyisihan online kok. Akan tetapi, penyisihan online diprioritaskan untuk daerah luar Jawa.</div>
             </div>        
     		</div>
  			</div>
 			<li>
 				<div class="faq_container">
    				<div class="faq">
-      			<div class="faq_question">Pertanyaan 2</div>
+      			<div class="faq_question">Kak bukti pendaftaran saya kok belum muncul di dashboard?</div>
            		<div class="faq_answer_container">
-              	<div class="faq_answer">Jawaban 2</div>
+              	<div class="faq_answer">Tunggu dengan sabar ya dek. Ini masih di proses. Jika H-1 penutupan pendaftaran masih belum muncul, silahkan hubungi contact person yang tertera di bawah ini.</div>
             </div>        
     		</div>
  			</div>
@@ -170,9 +170,9 @@ p{
 			<li>
 				<div class="faq_container">
    				<div class="faq">
-      			<div class="faq_question">Pertanyaan 1</div>
+      			<div class="faq_question">Kak, sertifikanya nanti pasti dapat pada saat Hari-H pelaksanaan kan?</div>
            		<div class="faq_answer_container">
-              	<div class="faq_answer">Jawaban 1</div>
+              	<div class="faq_answer">Iya adek. jika memang ada permasalahan, maka akan kami usahakan paling lambat H+7 acara sudah terkirimkan. Silahkan di lihat di TU masing-masing ya.</div>
            </div>        
     </div>
  </div>
@@ -192,6 +192,69 @@ p{
 		<br>
 	<li>
 		<h3>Lainnya</h3>
+		<ol type="1">
+			<li>
+				<div class="faq_container">
+   				<div class="faq">
+      			<div class="faq_question">Pertanyaan 1</div>
+           		<div class="faq_answer_container">
+              	<div class="faq_answer">Jawaban 1</div>
+            </div>        
+    		</div>
+ 			</div>
+			<li>
+				<div class="faq_container">
+   				<div class="faq">
+      			<div class="faq_question">Pertanyaan 2</div>
+           		<div class="faq_answer_container">
+              	<div class="faq_answer">Jawaban 2</div>
+            </div>        
+    		</div>
+ 			</div>
+		</ol>
+        <h3>Contact Person</h3>
+        <div class="line">
+            <div class="margin">
+               <div class="s-12 l-4 margin-bottom">
+                  <div class="menu-img">
+                     <a href="#popup1"><img src="img/7.jpg"></a>
+                  </div>
+               </div>
+               <div class="s-12 l-4 margin-bottom">
+                  <div class="menu-img">
+                     <a href="#popup2"><img src="img/1.jpg"></a>
+                  </div>
+               </div>
+            </div>
+        </div>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+               <h2>Contact Person Per Daerah</h2>
+               <a class="close" href="#">&times;</a>
+               <div class="content">Surabaya    : Nuning 085851088432, Kurnia 082338937095, Jeffry 082143666656 <br>
+                Malang      : Umy 083862761541, Rina 081239679679 <br>
+                Kediri      : Novita 087852277313, Winda 085737486339 <br>
+                Jember      : Sari 0899384764, Raras 082330504745 <br>
+                Madiun      : Usaid 085641579000, Diyanah 085659273351 <br>
+                Solo        : Ine 085643181415, Bella 085641889903 <br>
+                Jabodetabek : Fathi 08776964471, Afiif 083830183448 <br>
+                Denpasar    : Dwi 085737294027, Nobby 085792097124 <br>
+                Tulungagung : Arya 085739030201, Nurul 083849982616 <br>
+                Sumbawa     : Arga 081357467336, Sita 08995671472 <br>
+                </div>
+               <br>
+               <br>
+            </div>
+         </div>
+         <div id="popup2" class="overlay">
+            <div class="popup">
+               <h2>Permasalahan lainnya</h2>
+               <a class="close" href="#">&times;</a>
+               <div class="content">Azkaa 085755639606</div>
+               <br>
+               <br>
+            </div>
+         </div>
 		<ol type="1">
 			<li>
 				<div class="faq_container">
