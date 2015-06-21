@@ -8,8 +8,10 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/parallax.css"/>
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/components.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/responsee.css">
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.theme.css"><script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/owl-carousel/owl.theme.css">
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/responsee.js"></script>
 <!--[if lt IE 9]>
@@ -22,33 +24,29 @@ a {
 .top-nav li a:hover, .top-nav li.active-item a, .top-nav .logo.active-item a:hover {
 }
 .carousel-text {
-	display: block;
 	position: absolute;
-	top: 50%;
-	width: 100%;
+	top: 15%;
+	left: 50%;
+	display: block;
+	width: 60%;
+	margin-left: -30%;
 	z-index: 999;
 }
 .carousel-text h2 {
-	background: none repeat scroll 0 0 #fff;
-	color: rgb(0, 30, 34);
-	display: inline-block;
+	border: 2px #000 solid;
+	color: #000;
 	padding: 0.3125em 0.625em;
 	font-size: 2em;
+	text-align: center;
+	opacity: .5;
 }
 .carousel-text p {
 	background: none repeat scroll 0 0 rgba(0, 30, 34, 0.85);
 	color: #fff;
-	display: inline-block;
-	font-size: 1.2em;
-	padding: 0.625em 0.8em;
-}
-.carousel-text h2 {
-	font-size: 2em;
-}
-.carousel-text p {
 	font-size: 1em;
+	padding: 0.625em 0.8em;
+	text-align: center;
 }
-
 </style>
 </head>
 <body style="background-color:white;">
@@ -81,9 +79,14 @@ a {
 	<!-- CAROUSEL -->
 	<div style="min-height:100vh; width:100%; display:block; background-color:#fff">
 	<div id="owl-demo" class="owl-carousel owl-theme">
-		<div class="item" style="height:100vh; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/img/940x380.jpg)"> </div>
-		<div class="item" style="height:100vh; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/img/940x380-2.jpg)"></div>
-	</div>
+		<div class="item" style="height:100vh; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/img/pattern-3.svg)"> 
+			<div class="carousel-text">
+				<img style="display:block; max-width:200px; height:auto; margin-left:auto; margin-right:auto;" src="<?php echo base_url(); ?>assets/img/logo.svg">
+				<h2>SCHEMATICS 2015</h2>
+				<p>schematics.its.ac.id</p>
+			</div>
+		</div>
+		</div>
 	</div>
 	<!-- HOME PAGE BLOCK -->
 	<div style="width:100%; background-color:#ffe93b; min-height:100vh">
@@ -208,25 +211,17 @@ a {
 				   $("#owl-demo").owlCarousel({
 					navigation : true,
 					lazyLoad : true,
-					slideSpeed : 300,
+					slideSpeed : 600,
 					paginationSpeed : 400,
 					navigation : false,
 					autoPlay : true,
 					pagination : false,
 					singleItem:true
 				   });
-				   $("#owl-demo2").owlCarousel({
-					items : 1,
-					lazyLoad : true,
-					autoPlay : true,
-					navigation : false,
-					pagination : false
-				   });
 				 });
 			  </script> 
 <script src="<?php echo base_url(); ?>assets/js/jquery.parallax.js"></script> 
 <script>
-
 	// Yep, that's it!
 	$('#nlc').parallax();
 	$('#npc').parallax();

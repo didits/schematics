@@ -7,4 +7,5 @@ class Npc extends CI_Controller {
 		$this->load->view('event/npc');
 		$this->load->view('footer');
 	}
+	
 }
