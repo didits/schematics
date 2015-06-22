@@ -34,7 +34,6 @@
 			<div  style="display:inline-block; width:100%; height:100px; background-color:#019587">
 				<h2 align="center" style="line-height:100px; color:#FFF">VERIFIKASI BERHASIL</h2>
 			</div>
-			<form class="customform" action="<?php echo base_url();?>user/logout" method="post">
 				<div class="box">
 					<p style="line-height:50px; font-size:24px" align="center">Harap mencetak bukti pendaftaran! <BR></p>
 		<P align="center"><br><a href="<?php echo base_url();?>dashboard/bukti_pendaftaran_npc" target="_blank"><span style="background-color:#8bc24a" class="button">BUKTI PENDAFTARAN</span></a></P>
@@ -68,7 +67,6 @@
 						</div>
 					</div>
 				</div>
-			</form>
 		</div>
 	</div>
 	<br>

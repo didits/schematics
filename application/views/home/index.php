@@ -89,44 +89,31 @@ a {
 		</div>
 	</div>
 	<!-- HOME PAGE BLOCK -->
-	<div style="width:100%; background-color:#ffe93b; min-height:100vh">
+	<div style="width:100%; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/images/ptrn-1.svg); min-height:100vh">
 	<div id="container" class="container" style="overflow:hidden;">
 	<ul id="nlc" class="scene">
-		<li class="layer" data-depth="1.00">
-			<div style=""></div>
-			<img src="<?php echo base_url(); ?>assets/images/layer1.png"></li>
-		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/images/layer2.png"></li>
-		<li class="layer" data-depth="0.60"><img src="<?php echo base_url(); ?>assets/images/layer3.png"></li>
-		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/images/layer4.png"></li>
-		<li class="layer" data-depth="0.20"><img src="<?php echo base_url(); ?>assets/images/layer5.png"></li>
-		<li class="layer" data-depth="0.00"><img src="<?php echo base_url(); ?>assets/images/layer6.png"></li>
+		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/img/nlc/1.png"></li>
+		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/img/nlc/4.png"></li>
+		<li class="layer" data-depth="1.00"><img src="<?php echo base_url(); ?>assets/img/nlc/5.png"></li>
 	</ul>
 	</div>
 	</div>
 	
-	<div style="width:100%; background-color:#f44236;  min-height:100vh">
+	<div style="width:100%; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/images/ptrn-2.svg);  min-height:100vh">
 	<div id="container" class="container" style="overflow:hidden;">
 	<ul id="npc" class="scene">
-		<li class="layer" data-depth="1.00">
-			<div style=""></div>
-			<img src="<?php echo base_url(); ?>assets/images/layer1.png"></li>
-		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/images/layer2.png"></li>
-		<li class="layer" data-depth="0.60"><img src="<?php echo base_url(); ?>assets/images/layer3.png"></li>
-		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/images/layer4.png"></li>
-		<li class="layer" data-depth="0.20"><img src="<?php echo base_url(); ?>assets/images/layer5.png"></li>
-		<li class="layer" data-depth="0.00"><img src="<?php echo base_url(); ?>assets/images/layer6.png"></li>
+		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/img/npc/1.png"></li>
+		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/img/npc/2.png"></li>
+		<li class="layer" data-depth="1.00"><img src="<?php echo base_url(); ?>assets/img/npc/3.png"></li>
 	</ul>
 	</div>
 	</div>
-	<div style="width:100%; background-color:#4baf4f;  min-height:100vh">
+	<div style="width:100%; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/images/ptrn-3.svg);  min-height:100vh">
 	<div id="container" class="container" style="overflow:hidden;">
 	<ul id="nst" class="scene" >
-		<li class="layer" data-depth="1.00"><img src="<?php echo base_url(); ?>assets/images/layer1.png"></li>
-		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/images/layer2.png"></li>
-		<li class="layer" data-depth="0.60"><img src="<?php echo base_url(); ?>assets/images/layer3.png"></li>
-		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/images/layer4.png"></li>
-		<li class="layer" data-depth="0.20"><img src="<?php echo base_url(); ?>assets/images/layer5.png"></li>
-		<li class="layer" data-depth="0.00"><img src="<?php echo base_url(); ?>assets/images/layer6.png"></li>
+		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/img/nst/1.png"></li>
+		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/img/nst/2.png"></li>
+		<li class="layer" data-depth="1.00"><img src="<?php echo base_url(); ?>assets/img/nst/3.png"></li>
 	</ul>
 	</div>
 	</div>
