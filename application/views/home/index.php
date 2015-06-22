@@ -49,7 +49,7 @@ a {
 }
 </style>
 </head>
-<body style="background-color:white;">
+<body style="background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/img/pattern-3.svg)">
 	<header> 
 		<!-- TOP NAV -->
 		<div class="line" style="background-color:#fff" >
@@ -78,19 +78,21 @@ a {
 	
 	<!-- CAROUSEL -->
 	<div style="min-height:100vh; width:100%; display:block; background-color:#fff">
-	<div id="owl-demo" class="owl-carousel owl-theme">
-		<div class="item" style="height:100vh; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/img/pattern-3.svg)"> 
-			<div class="carousel-text">
+	<div id="owl-demo" class="owl-carousel owl-theme ">
+		<div class="item " style="height:100vh; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/img/pattern-3.svg)"> 
+			<div class="carousel-text wow flipInX">
 				<img style="display:block; max-width:200px; height:auto; margin-left:auto; margin-right:auto;" src="<?php echo base_url(); ?>assets/img/logo.svg">
-				<h2>SCHEMATICS 2015</h2>
+				<h2>2015</h2>
 				<p>schematics.its.ac.id</p>
 			</div>
 		</div>
 		</div>
 	</div>
+
 	<!-- HOME PAGE BLOCK -->
-	<div style="width:100%; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/images/ptrn-1.svg); min-height:100vh">
-	<div id="container" class="container" style="overflow:hidden;">
+	<div style="width:100%;  min-height:100vh; background-color:rgba(255, 233, 59, 0.5); overflow:hidden">
+		<div class="s-12 l-10 center">
+	<div id="container" class="container wow flipInX" style="overflow:hidden;">
 	<ul id="nlc" class="scene">
 		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/img/nlc/1.png"></li>
 		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/img/nlc/4.png"></li>
@@ -98,9 +100,19 @@ a {
 	</ul>
 	</div>
 	</div>
+	<div class="s-12 l-10 center">
+		<div class="line wow bounceIn" style="overflow:hidden">
+			<div class="box">
+				<h1>NATIONAL LOGIC COMPETITION</h1>
+		<p>NLC adalah kompetisi logika nasional terbesar di Indonesia. Di dalam kompetisi ini peserta akan diuji kemampuan logikanya, sehingga peserta tidak perlu repot-repot belajar untuk menghapal rumus - rumus dan teori-teori, cukup dengan hanya mengandalkan kemampuan berpikir kalian, kalian bisa mengikuti kompetisi yang bergengsi ini. Ayo uji kemampuan logikamu dalam kompetisi ini!</p>
+			</div>
+		</div>	
+	</div>
+	</div>
 	
-	<div style="width:100%; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/images/ptrn-2.svg);  min-height:100vh">
-	<div id="container" class="container" style="overflow:hidden;">
+	<div style="width:100%; min-height:100vh;  background-color:rgba(244, 66, 54, 0.5);overflow:hidden">
+	<div class="s-12 l-10 center">
+	<div id="container" class="container wow flipInX" style="overflow:hidden;">
 	<ul id="npc" class="scene">
 		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/img/npc/1.png"></li>
 		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/img/npc/2.png"></li>
@@ -108,8 +120,18 @@ a {
 	</ul>
 	</div>
 	</div>
-	<div style="width:100%; background-position:center; background-size:cover; background-image:url(<?php echo base_url(); ?>assets/images/ptrn-3.svg);  min-height:100vh">
-	<div id="container" class="container" style="overflow:hidden;">
+	<div class="s-12 l-10 center">
+		<div class="line wow bounceIn" style="overflow:hidden" >
+			<div class="box">
+				<h1>NATIONAL PROGRAMMING CONTEST</h1>
+		<p>NPC merupakan suatu kompetisi pemrograman tingkat nasional dengan standar kompetisi tingkat Internasional. Dalam NPC (National Programming Contest), peserta akan ditantang untuk menyelesaikan suatu permasalahan dengan membuat suatu program komputer. Bahasa pemrograman yang digunakan adalah Pascal (ekstensi file *.pas) atau C (ekstensi file *.c).</p>
+			</div>
+		</div>	
+	</div>
+	</div>
+	<div style="width:100%; min-height:100vh; background-color:rgba(75, 175, 79, 0.5);overflow:hidden">
+	<div class="s-12 l-10 center">
+	<div id="container" class="container wow flipInX" style="overflow:hidden;">
 	<ul id="nst" class="scene" >
 		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/img/nst/1.png"></li>
 		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/img/nst/2.png"></li>
@@ -117,81 +139,34 @@ a {
 	</ul>
 	</div>
 	</div>
-	<div style="width:100%; background-color:#2095f2;  min-height:100vh">
-	<div id="container" class="container" style="overflow:hidden;">
-	<ul id="reeva" class="scene">
-		<li class="layer" data-depth="1.00">
-			<div style=""></div>
-			<img src="<?php echo base_url(); ?>assets/images/layer1.png"></li>
-		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/images/layer2.png"></li>
-		<li class="layer" data-depth="0.60"><img src="<?php echo base_url(); ?>assets/images/layer3.png"></li>
-		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/images/layer4.png"></li>
-		<li class="layer" data-depth="0.20"><img src="<?php echo base_url(); ?>assets/images/layer5.png"></li>
-		<li class="layer" data-depth="0.00"><img src="<?php echo base_url(); ?>assets/images/layer6.png"></li>
-	</ul>
-</div>
-</div>
-	<div class="line" >
-	<h1 align="center">PRESTASI TEKNIK INFORMATIKA ITS</h1>
-		<div >
-			<div class="s-12 l-6">
-				<div class="box"> 
-				<ul style="list-style-type:round">
-  					<li>Peringkat 1 ajang Microsoft Imagine Cup bidang World Citizenship tingkat Nasional 2014</li>
-					<br>
-					<li>Peringkat 2 ajang Gemastik 7 UGM bidang Perangkat Lunak tingkat Nasional 2014</li>
-					<br>
-					<li>Peringkat 2 ajang Gemastik 7 UGM bidang Programming tingkat Nasional 2014</li>
-					<br>
-					<li>Peringkat 1 ajang Gemastik 7 UGM bidang Data Mining tingkat Nasional 2014</li>
-					<br>
-					<li>Peringkat 1 ajang L-CEN bidang Mobile Aplication tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 1 ajang ITS EXPO 2013 bidang Game Development tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 1 ajang ITS EXPO 2013 bidang Aplikasi tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 2 dan 3 ajang Gemastik 6 UGM bidang Keamanan Jaringan tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 1 ajang Gemastik 6 UGM bidang Embedded system tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 1 ajang Harvard National Model United Nations(HNMUN) bidang Social Venture Project tingkat Internasional 2015</li>
-				</ul>
-				</div>
-			</div>
-			<div class="s-12 l-6">
-				<div class="box"> 
-				<ul style="list-style-type:round">
-  					<li>Peringkat 3 ajang Gemastik 6 UGM bidang Debugging tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 3 ajang Gemastik 6 UGM bidang Data Mining tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 3 ajang Gemastik 6 UGM bidang Inovasi Perangkat Lunak tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 3 ajang Gemastik 6 UGM bidang Rancangan Perangkat Lunak tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 1 ajang UIN Micro Developing Competition tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 2 ajang Enumeration 2013 bidang Game Development tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 2 ajang Industry Creative Festival(INCREFEST) bidang Game Development tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 1 ajang MIT AITI Mobile Apps Indonesia bidang Mobile Apps tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 2 ajang IWIC 7 bidang Info tingkat Nasional 2013</li>
-					<br>
-					<li>Peringkat 3 ajang Caraka Festival Kreatif 2013 bidang Iklan Pendek tingkat Nasional 2013</li>	
-				</ul></div>
-			</div>
-			<form class="customform" action="<?php echo base_url();?>home/profile" method="post">
+	<div class="s-12 l-10 center">
+		<div class="line wow bounceIn" style="overflow:hidden" >
 			<div class="box">
-				<div class="s-12 l-3 center">
-					<button type="submit">PROFIL TEKNIK INFORMATIKA ITS</button>
-				</div>
-				</div>
-			</form>
-		</div>
+				<h1>National Seminar of Technology</h1>
+				<p>NST merupakan salah satu dari rangkaian acara Schematics 2015 yang kami hadirkan untuk memberikan pengetauhan Teknologi Informasi saat ini kepada masyarakat. Disamping itu, seminar ini juga kami hadirkan sebagai upaya untuk turut membantu dan memajukan Industri Teknologi Indonesia.</p>
+			</div>
+		</div>	
 	</div>
+	</div>
+
+	<div style="width:100%; min-height:100vh; background-color:rgba(2, 168, 244, 0.5);overflow:hidden">
+	<div class="s-12 l-10 center">
+	<div id="container" class="container wow flipInX" style="overflow:hidden;">
+	<ul id="reeva" class="scene" >
+		<li class="layer" data-depth="0.40"><img src="<?php echo base_url(); ?>assets/img/reeva/1.png"></li>
+		<li class="layer" data-depth="0.80"><img src="<?php echo base_url(); ?>assets/img/reeva/2.png"></li>
+	</div>
+	</div>
+	<div class="s-12 l-10 center">
+		<div class="line wow bounceIn" style="overflow:hidden">
+			<div class="box">
+				<h1>Revolutionary Entertainment and Expo with Various Arts</h1>
+				<p>REEVA merupakan salah satu rangkaian acara Schematics 2015. REEVA memfasilitasi dalam memperkenalkan sub-sub acara yang meliputi National Logic Contest (NLC), National Programming Contest (NPC), dan National Seminar of Technology (NST). Di dalam REEVA kali ini terdapat IT Expo yang diramaikan start up dan software house dari Jawa Timur, Music Competition se-Surabaya dan Konser Musik. Sebagai puncak acara dari rangkaian Schematics 2015, REEVA akan menghadirkan artis ibukota. Acara ini diharapkan dapat mengenalkan Jurusan Teknik Informatika Institut Teknologi Sepuluh Nopember (ITS) Surabaya dan Schematics ke masyarakat luas, mengenalkan mengembangkan jiwa seni, dan memperluas wawasan seputar teknologi terkini bagi masyarakat umum.</p>
+			</div>
+		</div>	
+	</div>
+	</div>
+	
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/owl-carousel/owl.carousel.js"></script> 
 <script type="text/javascript">
 				 jQuery(document).ready(function($) {
@@ -214,7 +189,18 @@ a {
 	$('#npc').parallax();
 	$('#nst').parallax();
 	$('#reeva').parallax();
+</script>
+<script src="<?php echo base_url(); ?>assets/js/wow.min.js"></script> 
 
-	</script>
-</body>
-</html>
+<script>
+			wow = new WOW(
+			  {
+				animateClass: 'animated',
+				offset:       250,
+				callback:     function(box) {
+				  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+				}
+			  }
+			);
+			wow.init();
+		  </script>

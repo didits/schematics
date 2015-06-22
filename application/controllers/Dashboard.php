@@ -29,6 +29,7 @@ class Dashboard extends CI_Controller {
 		if($this->session->userdata('status')=='t'){
 			$data['h'] = $this->nlc_model->show_informasi();
 			$this->load->view('dashboard/info_nlc', $data);
+			$this->load->view('footer');
 		}else if($this->session->userdata('status')=='f'){
 			$this->load->view('user/tunggu_validasi');
 			$this->load->view('footer');
@@ -67,6 +68,7 @@ class Dashboard extends CI_Controller {
 		if($this->session->userdata('status')=='t'){
 			$data['h'] = $this->npc_model->show_informasi();
 			$this->load->view('dashboard/info_npc', $data);
+			$this->load->view('footer');
 			}else if($this->session->userdata('status')=='f'){
 			$this->load->view('user/tunggu_validasi');
 			$this->load->view('footer');
