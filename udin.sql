@@ -828,11 +828,11 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_denpasar WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_denpasar set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_denpasar set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		set @ema = (select kode from user where email=email_);
 		INSERT INTO nlc_denpasar (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
 		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now(), @ema);
 	END IF;
@@ -852,14 +852,15 @@ nama_anggota_1_ varchar(50), nama_anggota_2_ varchar(50), no_hp_ketua_ varchar(2
 no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar(50), tempat_penyisihan_ varchar(50), 
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
-set @check_email = (SELECT email FROM nlc_jakarta WHERE email=email_);
+	set @check_email = (SELECT email FROM nlc_jakarta WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_jakarta set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_jakarta set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_jakarta (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
+	END IF;
 	call sukses_submit(email_, 'Jakarta');
 		select concat('NLC', KODE, '07', NO) AS 'id_tim' from nlc_jakarta WHERE email=email_;
     END */$$
@@ -877,13 +878,14 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_jember WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_jember set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_jember set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_jember (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
+	END IF;
 	call sukses_submit(email_,'Jember');
 		select concat('NLC', KODE, '04', NO) AS 'id_tim' from nlc_jember WHERE email=email_;
     END */$$
@@ -901,13 +903,14 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_kediri WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_kediri set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_kediri set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_kediri (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
+	END IF;
 	call sukses_submit(email_,'Kediri');
 		select concat('NLC', KODE, '03', NO) AS 'id_tim' from nlc_kediri WHERE email=email_;
     END */$$
@@ -925,14 +928,15 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_madiun WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_madiun set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_madiun set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_madiun (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
-	call sukses_submit(email_,'Madiun');
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
+	END IF;
+		call sukses_submit(email_,'Madiun');
 		select concat('NLC', KODE, '05', NO) AS 'id_tim' from nlc_madiun WHERE email=email_;
     END */$$
 DELIMITER ;
@@ -949,11 +953,11 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_malang WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_malang set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_malang set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_malang (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
 		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
@@ -973,12 +977,12 @@ nama_anggota_1_ varchar(50), nama_anggota_2_ varchar(50), no_hp_ketua_ varchar(2
 no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar(50), tempat_penyisihan_ varchar(50), 
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
-set @check_email = (SELECT email FROM nlc_online WHERE email=email_);
+	set @check_email = (SELECT email FROM nlc_online WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_online set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_online set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_online (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
 		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
@@ -999,11 +1003,11 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_solo WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_solo set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_solo set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_solo (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
 		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
@@ -1024,11 +1028,11 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_sumbawa WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_sumbawa set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_sumbawa set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_sumbawa (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
 		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);
 	END IF;
@@ -1049,11 +1053,11 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_surabaya WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_surabaya set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_surabaya set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_surabaya (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
 		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
@@ -1074,11 +1078,11 @@ no_hp_anggota_2_ varchar(20), nama_sekolah_ varchar(50), alamat_sekolah_ varchar
 kabupaten_ varchar(50), provinsi_ varchar(50))
 BEGIN
 	set @check_email = (SELECT email FROM nlc_tulungagung WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
-		update nlc_tulungagung set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
+		update nlc_tulungagung set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_, kode=@ema
 		where email= email_;
 	ELSE
-		SET @ema = (SELECT kode FROM USER WHERE email=email_);
 		INSERT INTO nlc_tulungagung (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
 		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
@@ -1097,12 +1101,12 @@ DELIMITER $$
 facebook_acc_ varchar(20), asal_sekolah_ varchar(200), nama_jalan_ varchar(200), nama_kota_ varchar(200), nama_provinsi_ varchar(200))
 BEGIN
 	set @check_email = (SELECT email FROM npc WHERE email=email_);
+	SET @ema = (SELECT kode FROM USER WHERE email=email_);
 	IF (isnull(@check_email)=0) THEN
 		update npc set nama = nama_, email=email_, no_hp=no_hp_, facebook_acc=facebook_acc_, asal_sekolah =asal_sekolah_, 
-		nama_jalan=nama_jalan_, nama_kota=nama_kota_, nama_provinsi=nama_provinsi_
+		nama_jalan=nama_jalan_, nama_kota=nama_kota_, nama_provinsi=nama_provinsi_, kode=@ema
 		where email= email_;
-	ELSE
-		set @ema = (select kode from user where email=email_);
+	ELSe
 		INSERT INTO npc (nama, email, no_hp, facebook_acc, asal_sekolah, nama_jalan, nama_kota, nama_provinsi, tanggal, KODE) 
 		VALUES (nama_, email_, no_hp_, facebook_acc_, asal_sekolah_, nama_jalan_, nama_kota_, nama_provinsi_, now(), @ema);
 	END IF;
