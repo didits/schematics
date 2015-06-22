@@ -487,12 +487,13 @@ CREATE TABLE `user` (
   `status` varchar(1) DEFAULT NULL,
   `waktu` date DEFAULT NULL,
   `daerah` varchar(100) DEFAULT NULL,
+  `KODE` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`email`,`password`,`event`,`status`,`waktu`,`daerah`) values (1,'didit@gmail.com','alfalink','NLC','t','2015-06-12','Online'),(2,'tralala@gmail.com','f492b650d029dc263631b06feb5d8b1b','NPC','t','2015-06-12','Online'),(3,'fsfsadas@gmail.com','alfalink','NPC',NULL,'2015-06-12',NULL),(4,'nanana@gmail.com','alfalink','NLC','t','2015-06-13','Surabaya'),(5,'sari@gmail.com','alfalink','NLC',NULL,'2015-06-14',NULL),(6,'sarSi@gmail.com','alfalink','NLC',NULL,'2015-06-14',NULL),(7,'DSADAS@gmail.com','alfalink','NLC',NULL,'2015-06-14',NULL),(8,'x@gmail.com','alfalink','NLC','t','2015-06-19','Online'),(9,'jakarta@gmail.com','alfalink','NLC','t','2015-06-19','Jakarta'),(10,'solo@gmail.com','alfalink','NLC','t','2015-06-19','Solo'),(11,'madiun@gmail.com','alfalink','NLC','t','2015-06-19','Madiun'),(12,'malang@gmail.com','alfalink','NLC','t','2015-06-19','Malang'),(13,'kediri@gmail.com','alfalink','NLC','t','2015-06-19','Kediri'),(14,'tulungagung@gmail.com','alfalink','NLC','t','2015-06-19','Tulungagung'),(15,'jember@gmail.com','alfalink','NLC','t','2015-06-19','Jember'),(16,'denpasar@gmail.com','alfalink','NLC','t','2015-06-19','Jember'),(17,'sumbawa@gmail.com','alfalink','NLC','t','2015-06-19','Sumbawa'),(18,'npc@gmail.com','alfalink','NPC','t','2015-06-19','Online');
+insert  into `user`(`id`,`email`,`password`,`event`,`status`,`waktu`,`daerah`,`KODE`) values (1,'didit@gmail.com','alfalink','NLC','t','2015-06-12','Online',0),(2,'tralala@gmail.com','f492b650d029dc263631b06feb5d8b1b','NPC','t','2015-06-12','Online',0),(3,'fsfsadas@gmail.com','alfalink','NPC',NULL,'2015-06-12',NULL,0),(4,'nanana@gmail.com','alfalink','NLC','t','2015-06-13','Surabaya',0),(5,'sari@gmail.com','alfalink','NLC',NULL,'2015-06-14',NULL,0),(6,'sarSi@gmail.com','alfalink','NLC',NULL,'2015-06-14',NULL,0),(7,'DSADAS@gmail.com','alfalink','NLC',NULL,'2015-06-14',NULL,0),(8,'x@gmail.com','alfalink','NLC','t','2015-06-19','Online',0),(9,'jakarta@gmail.com','alfalink','NLC','t','2015-06-19','Jakarta',0),(10,'solo@gmail.com','alfalink','NLC','t','2015-06-19','Solo',0),(11,'madiun@gmail.com','alfalink','NLC','t','2015-06-19','Madiun',0),(12,'malang@gmail.com','alfalink','NLC','t','2015-06-19','Malang',0),(13,'kediri@gmail.com','alfalink','NLC','t','2015-06-19','Kediri',0),(14,'tulungagung@gmail.com','alfalink','NLC','t','2015-06-19','Tulungagung',0),(15,'jember@gmail.com','alfalink','NLC','t','2015-06-19','Jember',0),(16,'denpasar@gmail.com','alfalink','NLC','t','2015-06-19','Jember',0),(17,'sumbawa@gmail.com','alfalink','NLC','t','2015-06-19','Sumbawa',0),(18,'npc@gmail.com','alfalink','NPC','t','2015-06-19','Online',0),(19,'azkaa@gmail.com','yoiki','NLC',NULL,'2015-06-22',NULL,2),(20,'azkaa1@gmail.com','yoiki','NLC',NULL,'2015-06-22',NULL,2);
 
 /* Procedure structure for procedure `belum_denpasar` */
 
@@ -831,8 +832,9 @@ BEGIN
 		update nlc_denpasar set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_denpasar (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
+		set @ema = (select kode from user where email=email_);
+		INSERT INTO nlc_denpasar (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now(), @ema);
 	END IF;
 		call sukses_submit(email_, 'Denpasar');
 		select concat('NLC', KODE, '08', NO) AS 'id_tim' from nlc_denpasar WHERE email=email_;
@@ -855,9 +857,9 @@ set @check_email = (SELECT email FROM nlc_jakarta WHERE email=email_);
 		update nlc_jakarta set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_jakarta (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
-	END IF;
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_jakarta (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
 	call sukses_submit(email_, 'Jakarta');
 		select concat('NLC', KODE, '07', NO) AS 'id_tim' from nlc_jakarta WHERE email=email_;
     END */$$
@@ -879,9 +881,9 @@ BEGIN
 		update nlc_jember set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_jember (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
-	END IF;
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_jember (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
 	call sukses_submit(email_,'Jember');
 		select concat('NLC', KODE, '04', NO) AS 'id_tim' from nlc_jember WHERE email=email_;
     END */$$
@@ -903,9 +905,9 @@ BEGIN
 		update nlc_kediri set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_kediri (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
-	END IF;
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_kediri (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
 	call sukses_submit(email_,'Kediri');
 		select concat('NLC', KODE, '03', NO) AS 'id_tim' from nlc_kediri WHERE email=email_;
     END */$$
@@ -927,9 +929,9 @@ BEGIN
 		update nlc_madiun set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_madiun (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
-	END IF;
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_madiun (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	END IF;
 	call sukses_submit(email_,'Madiun');
 		select concat('NLC', KODE, '05', NO) AS 'id_tim' from nlc_madiun WHERE email=email_;
     END */$$
@@ -951,8 +953,9 @@ BEGIN
 		update nlc_malang set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_malang (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_malang (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
 		call sukses_submit(email_,'Malang');
 		select concat('NLC', KODE, '02', NO) AS 'id_tim' from nlc_malang WHERE email=email_;
@@ -975,8 +978,9 @@ set @check_email = (SELECT email FROM nlc_online WHERE email=email_);
 		update nlc_online set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_online (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_online (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
 		call sukses_submit(email_, 'Online');
 		select concat('NLC', KODE, '00', NO) AS 'id_tim' from nlc_online WHERE email=email_;
@@ -999,8 +1003,9 @@ BEGIN
 		update nlc_solo set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_solo (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_solo (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
 		call sukses_submit(email_, 'Solo');
 		select concat('NLC', KODE, '06', NO) AS 'id_tim' from nlc_solo WHERE email=email_;
@@ -1023,8 +1028,9 @@ BEGIN
 		update nlc_sumbawa set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_sumbawa (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_sumbawa (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);
 	END IF;
 	call sukses_submit(email_, 'Sumbawa');
 		select concat('NLC', KODE, '10', NO) AS 'id_tim' from nlc_sumbawa WHERE email=email_;
@@ -1047,8 +1053,9 @@ BEGIN
 		update nlc_surabaya set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_surabaya (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_surabaya (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
 	call sukses_submit(email_, 'Surabaya');
 		select concat('NLC', KODE, '01', NO) AS 'id_tim' from nlc_surabaya WHERE email=email_;
@@ -1071,8 +1078,9 @@ BEGIN
 		update nlc_tulungagung set NAMA_KELOMPOK = nama_kelompok_, nama_ketua=nama_ketua_, email_ketua=email_ketua_, nama_anggota_1=nama_anggota_1_, nama_anggota_2=nama_anggota_2_, nama_sekolah=nama_sekolah_, kabupaten=kabupaten_, provinsi=provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO nlc_tulungagung (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU) 
-		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, now());
+		SET @ema = (SELECT kode FROM USER WHERE email=email_);
+		INSERT INTO nlc_tulungagung (EMAIL, NAMA_KELOMPOK, NAMA_KETUA, EMAIL_KETUA, NAMA_ANGGOTA_1, NAMA_ANGGOTA_2, NO_HP_KETUA, NO_HP_ANGGOTA_1, NO_HP_ANGGOTA_2, NAMA_SEKOLAH, ALAMAT_SEKOLAH, KABUPATEN, PROVINSI, WAKTU, KODE) 
+		VALUES (email_, nama_kelompok_, nama_ketua_, email_ketua_, nama_anggota_1_, nama_anggota_2_, no_hp_ketua_, no_hp_anggota_1_, no_hp_anggota_2_, nama_sekolah_, alamat_sekolah_, kabupaten_, provinsi_, NOW(), @ema);	
 	END IF;
 	call sukses_submit(email_,'Tulungagung');
 		select concat('NLC', KODE, '09', NO) AS 'id_tim' from nlc_tulungagung WHERE email=email_;
@@ -1094,8 +1102,9 @@ BEGIN
 		nama_jalan=nama_jalan_, nama_kota=nama_kota_, nama_provinsi=nama_provinsi_
 		where email= email_;
 	ELSE
-		INSERT INTO npc (nama, email, no_hp, facebook_acc, asal_sekolah, nama_jalan, nama_kota, nama_provinsi, tanggal) 
-		VALUES (nama_, email_, no_hp_, facebook_acc_, asal_sekolah_, nama_jalan_, nama_kota_, nama_provinsi_, now());
+		set @ema = (select kode from user where email=email_);
+		INSERT INTO npc (nama, email, no_hp, facebook_acc, asal_sekolah, nama_jalan, nama_kota, nama_provinsi, tanggal, KODE) 
+		VALUES (nama_, email_, no_hp_, facebook_acc_, asal_sekolah_, nama_jalan_, nama_kota_, nama_provinsi_, now(), @ema);
 	END IF;
 		call sukses_submit(email_,'Online');
 		select concat('NPC', KODE, '00', NO) AS 'id_tim' from npc WHERE email=email_;
